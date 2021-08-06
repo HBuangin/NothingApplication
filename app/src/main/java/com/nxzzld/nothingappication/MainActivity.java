@@ -75,7 +75,8 @@ public class MainActivity extends BaseActivity {
 //                int resid = Integer.valueOf(s) + Integer.valueOf(s1);
 //                tvButton1.setText(resid + "");
 
-                ToastUtil.show("SKKKIKKHFIMEIIE");
+
+                ToastUtil.show("这额给了");
 
             }
         });

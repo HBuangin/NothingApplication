@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_package = "com.example.administrator.grpctest.proto";
+option java_outer_classname = "HelloWorldProto";
+option optimize_for = CODE_SIZE;
+
+//service package name
+package proto;
+
+//服务端中的HelloWorld这个接口，这个接口中可以包含多个方法
+service HelloWorld {
+  rpc sayHello (RequestP) returns (ReplyP) {}
+}
+
+message ReplyP{
+  bool   Result = 1;
+  string UUID   = 2;
+  string Token  = 3;
+  string extra  = 4;
+}
+
+message RequestP{
+  string      UUID        = 1;
+  string      Token       = 2;
+  PersionInfo persionInfo = 3;
+  reserved  15, 9 to 11;
+}
+
+message PersionInfo{
+  string id   = 1;
+  string name = 2;
+  int32  age  = 3;
+
+}
